@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rapunzel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <div class="header-top">
+      <h1>Rapunzel</h1>
+      <div class="avatar-container">
+        <img src="img/projeto-avatar.png" alt="Avatar da Rapunzel" class="avatar">
+      </div>
+   
+    </div>
+    <p class="intro">
+      Olá! 
+      Sou uma jovem sonhadora que passou anos em uma torre, mas nunca deixou de explorar o mundo através da arte e da imaginação. Amo pintar, cantar, cuidar dos animais e costurar vestidos encantados. Minha curiosidade me levou a descobrir poderes mágicos e a criar projetos que refletem minha paixão pela vida e pela beleza que há em cada detalhe.
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="habilidades">
+      <h2>Habilidades</h2>
+      <p>
+        Pintura, canto, poderes mágicos de cura com o cabelo, ótimo trato com animais, costura e muitas outras atividades!
+      </p>
+    </section>
+
+    <section class="projetos">
+      <h2>Projetos</h2>
+      <div class="cards">
+
+        <!-- Card 1 -->
+        <div class="card" onclick="openModal('modal1')">
+          <h3>Pintura das Lâmpadas</h3>
+          <img src="img/projeto-desenho.png" alt="Pintura das Lâmpadas">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" onclick="openModal('modal2')">
+          <h3>Livros Infantis Ilustrados</h3>
+          <img src="img/projeto-criancas1.png" alt="Livros Infantis">
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" onclick="openModal('modal3')">
+          <h3>Jardim dos Sonhos</h3>
+          <img src="img/projeto-flor.png" alt="Jardim dos Sonhos">
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" onclick="openModal('modal4')">
+          <h3>Festival da Canção</h3>
+          <img src="img/projeto-festival.png" alt="Festival da Canção">
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" onclick="openModal('modal5')">
+          <h3>Ateliê de Costura Criativa</h3>
+          <img src="img/projeto-costura.png" alt="Ateliê de Costura">
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contato: rapunzel.luzeterna@reinoencantado.com</p>
+    <p>Instagram: <a href="#">@RapunzelOficial</a></p>
+    <p>© 2025 - Criado com criatividade e magia.</p>
+  </footer>
+
+  <!-- Modais -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Pintura das Lâmpadas</h2>
+      <p>Um mural encantador que pintei para celebrar a tradição das lanternas...</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Livros Infantis Ilustrados</h2>
+      <p>Criei histórias ilustradas com mensagens de coragem, empatia e esperança...</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Jardim dos Sonhos</h2>
+      <p>Um espaço florido e mágico que projetei para relaxar e meditar...</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h2>Festival da Canção</h2>
+      <p>Organizei um festival no castelo para reunir artistas do reino...</p>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+      <h2>Ateliê de Costura Criativa</h2>
+      <p>Criei um espaço para fazer roupas encantadas com tecidos naturais...</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
