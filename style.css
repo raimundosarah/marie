@@ -1,132 +1,168 @@
-!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rapunzel</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Link para a fonte Areia Movediça -->
-  <link href="https://fonts.googleapis.com/css2?family=Areia+Movediça&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="header-top">
-      <h1>Rapunzel</h1>
-      <div class="avatar-container">
-        <img src="img/projeto-avatar.png" alt="Avatar da Rapunzel" class="avatar">
-      </div>
-    </div>
-    <p class="intro">
-      Olá! 
-      Sou uma jovem sonhadora que passou anos em uma torre, mas nunca deixou de explorar o mundo através da arte e da imaginação. Amo pintar, cantar, cuidar dos animais e costurar vestidos encantados. Minha curiosidade me levou a descobrir poderes mágicos e a criar projetos que refletem minha paixão pela vida e pela beleza que há em cada detalhe.
-    </p>
-  </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <main class="container">
-    <section class="habilidades">
-      <h2>Habilidades</h2>
-      <p>
-        Pintura, canto, poderes mágicos de cura com o cabelo, ótimo trato com animais, costura e muitas outras atividades!
-      </p>
-    </section>
-    <section class="projetos">
-      <h2>Projetos</h2>
-      <div class="cards">
+body {
+  font-family: 'Areia Movediça', sans-serif;  /* Fonte Areia Movediça */
+  background-color: #f8f4e4;
+  color: #5d4037;
+  text-align: center;
+  padding: 20px;
+}
 
-        <!-- Card 1 -->
-        <div class="card" onclick="openModal('modal1')">
-          <h3>Pintura das Lâmpadas</h3>
-          <img src="img/projeto-desenho.png" alt="Pintura das Lâmpadas">
-        </div>
+/* Header com faixa roxa */
+.header-top {
+  background-color: #ac67c7;
+  padding: 30px 20px;
+}
 
-        <!-- Card 2 -->
-        <div class="card" onclick="openModal('modal2')">
-          <h3>Livros Infantis Ilustrados</h3>
-          <img src="img/projeto-criancas2.png" alt="Livros Infantis">
-        </div>
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #5d4037;
+}
 
-        <!-- Card 3 -->
-        <div class="card" onclick="openModal('modal3')">
-          <h3>Jardim dos Sonhos</h3>
-          <img src="img/projeto-flor.png" alt="Jardim dos Sonhos">
-        </div>
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
-        <!-- Card 4 -->
-        <div class="card" onclick="openModal('modal4')">
-          <h3>Festival da Canção</h3>
-          <img src="img/projeto-festival.png" alt="Festival da Canção">
-        </div>
+.avatar {
+  width: 200px;  /* Aumentando a imagem do avatar */
+  height: 200px; /* Aumentando a imagem do avatar */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid hsl(60, 32%, 89%);
+}
 
-        <!-- Card 5 -->
-        <div class="card" onclick="openModal('modal5')">
-          <h3>Ateliê de Costura Criativa</h3>
-          <img src="img/projeto-costura.png" alt="Ateliê de Costura">
-        </div>
+/* Introdução */
+.intro {
+  font-size: 1.5em;
+  max-width: 800px;
+  margin: 20px auto 40px auto;
+  line-height: 1.6;
+}
 
-      </div>
-    </section>
-  </main>
+/* Seções principais */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-  <footer>
-    <p>Contato: <a href="https://github.com/raimundosarah/rapunzel.git" target="_blank">GitHub: raimundosarah</a></p>
-    <p>© 2025 - Criado com criatividade e magia.</p>
-  </footer>
-  
-  <!-- Modais -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal1')">&times;</span>
-      <h2>Pintura das Lâmpadas</h2>
-      <p>A Pintura das Lâmpadas é um mural encantado que transformei lanternas em obras de arte, trazendo luz e esperança ao ambiente. Cada lâmpada foi pintada para refletir sentimentos e sonhos, criando uma atmosfera mágica e iluminada que simboliza como a luz sempre pode nos guiar.
-      </p>
-    </div>
-  </div>
-  <div id="modal2" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal2')">&times;</span>
-      <h2>Livros Infantis Ilustrados</h2>
-      <p>Nos Livros Infantis Ilustrados, criei histórias mágicas com lições sobre amizade, coragem e superação. As ilustrações vibrantes acompanham cada narrativa, levando as crianças a explorar o poder da imaginação e a entender que todos têm um papel especial no mundo.
-      </p>
-    </div>
-  </div>
-  <div id="modal3" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal3')">&times;</span>
-      <h2>Jardim dos Sonhos</h2>
-      <p>O Jardim dos Sonhos foi inspirado pela flor mágica que concedeu os poderes de cura a Rapunzel. Com suas flores vibrantes e ambiente tranquilo, é um refúgio perfeito para relaxar e se conectar com a natureza.</p>
-    </div>
-  </div>
-  <div id="modal4" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal4')">&times;</span>
-      <h2>Festival da Canção</h2>
-      <p>O Festival da Canção foi criado para reunir artistas e músicos do reino para celebrar a música como uma forma de união. Cada performance foi uma oportunidade de expressar emoções, contar histórias e viver momentos de pura magia e alegria.
-      </p>
-    </div>
-  </div>
-  <div id="modal5" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal5')">&times;</span>
-      <h2>Ateliê de Costura Criativa</h2>
-      <p>No Ateliê de Costura Criativa, criei um espaço para confeccionar roupas encantadas com tecidos naturais. Este projeto é uma mistura de arte e funcionalidade, onde a criatividade ganha vida através de peças únicas que refletem a beleza da costura e o poder de transformar o comum em mágico.
-</p>
-    </div>
-  </div>
+section {
+  margin-bottom: 60px;
+}
 
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #8a469c;
+}
 
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
+/* Habilidades */
+.habilidades p {
+  font-size: 1.5em;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
 
-    window.onclick = function(event) {
-      if (event.target.classList.contains("modal")) {
-        event.target.style.display = "none";
-      }
-    }
-  </script>
-</body>
-</html>
+/* Cards de projetos */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: #e6c0fc;
+  border: 2px solid #dc96e6;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: #712279;
+  margin-bottom: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #f1e9ce;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+  text-align: left;
+}
+
+.modal-content h2 {
+  color: #76218d;
+}
+
+.close {
+  color: #5d4037;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Footer */
+footer {
+  background-color: #e497ec;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #5d4037;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #5d4037;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
